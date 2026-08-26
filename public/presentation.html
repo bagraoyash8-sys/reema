@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voyara Travels — Final Internship Project Presentation</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#F0FDFA',
+              100: '#CCFBF1',
+              500: '#14B8A6',
+              600: '#0D9488',
+              700: '#0F766E',
+              900: '#134E4A',
+              950: '#042F2E',
+            },
+            amber: {
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B1120;
+      color: #F1F5F9;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+    .slide {
+      display: none;
+      min-height: 82vh;
+      animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .slide.active {
+      display: flex;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px) scale(0.99); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    @media print {
+      body { background: white; color: black; }
+      .no-print { display: none !important; }
+      .slide { display: flex !important; min-height: 100vh; page-break-after: always; color: black; }
+      .glass-card { background: white; border: 1px solid #e2e8f0; color: black; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-4 sm:p-8 select-none">
+
+  <!-- Top Global Bar -->
+  <header class="max-w-7xl mx-auto w-full flex items-center justify-between py-3 px-6 glass-card rounded-2xl mb-4 no-print">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-teal-400 flex items-center justify-center text-white font-black shadow-lg shadow-teal-500/20">
+        <i class="fa-solid fa-compass text-lg"></i>
+      </div>
+      <div>
+        <span class="font-heading font-black tracking-wider text-lg text-white flex items-center gap-1.5">
+          VOYARA <span class="text-xs px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">TRAVELS</span>
+        </span>
+        <span class="text-[11px] text-slate-400 block -mt-1 font-medium">Final Internship Project Presentation</span>
+      </div>
+    </div>
+
+    <!-- Progress Indicator -->
+    <div class="flex items-center gap-4">
+      <span class="text-xs font-bold text-slate-400">
+        Slide <span id="currentSlideNum" class="text-teal-400 font-black text-sm">1</span> of 10
+      </span>
+      <div class="w-36 sm:w-56 h-2 rounded-full bg-slate-800 overflow-hidden border border-slate-700">
+        <div id="progressBar" class="h-full bg-gradient-to-r from-teal-500 to-amber-400 transition-all duration-300 w-[10%]"></div>
+      </div>
+      <button onclick="window.print()" class="px-3 py-1.5 rounded-xl glass-pill hover:bg-white/15 text-xs font-semibold text-slate-300 transition-all">
+        <i class="fa-solid fa-print mr-1.5"></i> Export PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- Slide Container -->
+  <main class="max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center">
+
+    <!-- ================= SLIDE 1: Title & Executive Summary ================= -->
+    <section class="slide active flex-col justify-center items-center text-center p-6 sm:p-12 glass-card rounded-3xl relative overflow-hidden">
+      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-teal-500/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-teal-300 text-xs sm:text-sm font-semibold mb-6">
+        <i class="fa-solid fa-sparkles text-amber-400"></i> Final Internship Engineering Capstone Project
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight max-w-5xl mb-6">
+        Voyara Travels
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-amber-300 to-teal-200 text-3xl sm:text-5xl mt-2">
+          Next-Gen Bespoke Travel & Hospitality Platform
+        </span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-xl max-w-3xl leading-relaxed mb-10 font-normal">
+        An enterprise-grade hotel booking platform and 5-step custom itinerary studio inspired by Agoda, engineered with pure responsive UI, real-time dynamic pricing calculation, and scannable digital QR passes.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-4xl pt-6 border-t border-slate-800">
+        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80">
+          <span class="text-xs text-slate-400 block font-medium">Architecture</span>
+          <span class="font-bold text-sm text-teal-300">Full-Stack Web App</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80">
+          <span class="text-xs text-slate-400 block font-medium">Frontend Stack</span>
+          <span class="font-bold text-sm text-white">React & HTML/CSS/JS</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80">
+          <span class="text-xs text-slate-400 block font-medium">Backend & DB</span>
+          <span class="font-bold text-sm text-amber-300">Node.js JSON Saver</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80">
+          <span class="text-xs text-slate-400 block font-medium">Key Innovation</span>
+          <span class="font-bold text-sm text-teal-300">Live Custom Itineraries</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 2: Problem Statement & Objectives ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-teal-400 mb-2">Slide 02 • Context & Goal</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Problem Statement & Project Objectives</h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-3xl">Why we built Voyara Travels: tackling fragmentation, hidden pricing, and rigid package limitations in modern OTAs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- The Problems -->
+        <div class="p-6 rounded-2xl bg-rose-950/20 border border-rose-500/20 space-y-4">
+          <div class="flex items-center gap-3 text-rose-400 font-black text-lg">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Current Industry Challenges</span>
+          </div>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+              <span><strong>Rigid Fixed Tour Packages:</strong> Traditional OTAs don't allow travelers to custom tailor activities, stays, and concierge perks day-by-day.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+              <span><strong>Opaque Checkout Pricing:</strong> Unexpected tax jumps, service markups, and obscure cancellation policies at final payment.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+              <span><strong>Cluttered & Slow Interfaces:</strong> Overwhelming banner clutter and sluggish multi-page reloads hurting user conversions.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- The Voyara Solution -->
+        <div class="p-6 rounded-2xl bg-teal-950/30 border border-teal-500/30 space-y-4">
+          <div class="flex items-center gap-3 text-teal-300 font-black text-lg">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Voyara Solution & Objectives</span>
+          </div>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-teal-400 mt-1"></i>
+              <span><strong>5-Step Custom Itinerary Studio:</strong> Choose vibe, stay tier, excursions, and perks with real-time budget computation & 15% discount.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-teal-400 mt-1"></i>
+              <span><strong>Agoda-Grade Room Matrix:</strong> Side-by-side comparison of inclusions, square footage, bed sizes, and transparent pricing.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-teal-400 mt-1"></i>
+              <span><strong>Digital QR Voucher Verification:</strong> Instant printable PDF travel passes with dynamic scannable QR verification.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+        <span>💡 <strong>Target Outcome:</strong> Build an intuitive, zero-latency full-stack application suitable for modern commercial deployment.</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 3: System Architecture & Tech Stack ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-teal-400 mb-2">Slide 03 • Engineering</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">System Architecture & Technology Stack</h2>
+        <p class="text-slate-400 text-sm">Engineered with modern component-driven frontend and a resilient Node.js file database backend.</p>
+      </div>
+
+      <!-- Architecture Pipeline -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-teal-500/30 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-desktop text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Frontend Client Layer</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Single Page Application (SPA) architecture with React 18 + TypeScript & Pure HTML5/CSS3/Vanilla JS edition. Fast zero-reload state routing.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">React 18</span>
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">Tailwind CSS</span>
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">TypeScript</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-amber-500/30 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-server text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Backend REST API Layer</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Node.js runtime with Express.js routing engine. Handles hotel querying, coupon validation (`VOYARA20`), and booking transactions.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">Node.js</span>
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">Express.js</span>
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">CORS</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-cyan-500/30 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-database text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">JSON Database Saver</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Lightweight atomic file persistence engine (`data/db.js`). Saves user bookings, custom trip plans, and wishlists to disk without DB setup.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">File System (fs)</span>
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">Atomic CRUD</span>
+            <span class="px-2 py-0.5 rounded-md bg-slate-800 text-[10px] text-slate-300 font-semibold">JSON Storage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center justify-between text-xs text-slate-400">
+        <span>⚙️ <strong>Port Configuration:</strong> React Client on port <strong>3000</strong> • Node.js Full-Stack on port <strong>5000</strong></span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 4: Hero Search Engine & Smart Filtering ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-teal-400 mb-2">Slide 04 • User Experience</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">Hero Search Engine & Smart Multi-Filters</h2>
+        <p class="text-slate-400 text-sm">Frictionless discovery engine with real-time auto-suggest and comprehensive property filters.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- Search Engine Highlights -->
+        <div class="space-y-4">
+          <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 text-teal-300 font-bold text-sm">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Intelligent Autocomplete & Recent Searches</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Real-time query matching across 8 world destinations (Bali, Tokyo, Paris, Goa, Dubai, Santorini, Maldives, Singapore) with saved search tags.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+              <i class="fa-solid fa-calendar-days"></i>
+              <span>Dual-Date Picker with Nights Counter</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Interactive check-in/out calendars that compute and render dynamic duration badges (e.g. <em>"4 Nights"</em>).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 text-cyan-300 font-bold text-sm">
+              <i class="fa-solid fa-users"></i>
+              <span>Guests & Room Stepper Modal</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Frictionless (+ / -) controls for Adults, Children, and Room counts with real-time payload updates.
+            </p>
+          </div>
+        </div>
+
+        <!-- Filter Sidebar Highlights -->
+        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-sliders text-teal-400"></i> Agoda-Style Multi-Filter Sidebar
+          </h3>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60">
+              <span>Price Range Slider:</span>
+              <span class="font-bold text-teal-300">$50 to $800+ / night</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60">
+              <span>Star Rating Filters:</span>
+              <span class="font-bold text-amber-300">1 to 5 Stars</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60">
+              <span>Guest Review Score:</span>
+              <span class="font-bold text-emerald-400">9+ Exceptional • 8+ Fabulous</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60">
+              <span>Property Amenities:</span>
+              <span class="font-bold text-slate-200">Ocean View, Pool, Spa, Free Wi-Fi</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs text-slate-400">
+        <span>🌐 <strong>Multi-Currency Converter:</strong> Supports live conversion into USD ($), INR (₹), EUR (€), GBP (£), JPY (¥), AUD (A$), CAD (C$), and SGD (S$).</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 5: Custom Trip Planner Studio ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2">Slide 05 • Flagship Feature</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">Bespoke Custom Trip Planner Studio</h2>
+        <p class="text-slate-400 text-sm">Interactive 5-step custom itinerary wizard with real-time budget computation and automatic bundle savings.</p>
+      </div>
+
+      <!-- 5-Step Pipeline -->
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 my-6">
+        <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-teal-500/30 text-center space-y-1.5">
+          <div class="w-7 h-7 mx-auto rounded-full bg-teal-500/20 text-teal-300 font-bold text-xs flex items-center justify-center">1</div>
+          <h4 class="font-bold text-white text-xs">Vibe & Destination</h4>
+          <p class="text-[11px] text-slate-400">Honeymoon, Beach & Spa, Adventure</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-teal-500/30 text-center space-y-1.5">
+          <div class="w-7 h-7 mx-auto rounded-full bg-teal-500/20 text-teal-300 font-bold text-xs flex items-center justify-center">2</div>
+          <h4 class="font-bold text-white text-xs">Stay Tier</h4>
+          <p class="text-[11px] text-slate-400">5-Star Suites, Pool Villas, Boutique</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-teal-500/30 text-center space-y-1.5">
+          <div class="w-7 h-7 mx-auto rounded-full bg-teal-500/20 text-teal-300 font-bold text-xs flex items-center justify-center">3</div>
+          <h4 class="font-bold text-white text-xs">Excursions</h4>
+          <p class="text-[11px] text-slate-400">Catamarans, Helitours, Safaris</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-teal-500/30 text-center space-y-1.5">
+          <div class="w-7 h-7 mx-auto rounded-full bg-teal-500/20 text-teal-300 font-bold text-xs flex items-center justify-center">4</div>
+          <h4 class="font-bold text-white text-xs">Concierge Perks</h4>
+          <p class="text-[11px] text-slate-400">Chauffeurs, Spa, Photographers</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-amber-500/40 text-center space-y-1.5">
+          <div class="w-7 h-7 mx-auto rounded-full bg-amber-500/20 text-amber-300 font-bold text-xs flex items-center justify-center">5</div>
+          <h4 class="font-bold text-amber-300 text-xs">Generated Itinerary</h4>
+          <p class="text-[11px] text-slate-400">Day-by-Day Timeline + 15% Discount</p>
+        </div>
+      </div>
+
+      <!-- Real Time Formula Card -->
+      <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+        <div class="flex items-center justify-between text-xs text-slate-300 font-semibold border-b border-slate-800 pb-2">
+          <span>Real-Time Math Engine:</span>
+          <span class="text-emerald-400 font-bold">Automatic 15% Bundle Discount Applied</span>
+        </div>
+        <div class="text-xs font-mono text-teal-300 bg-slate-950 p-3 rounded-xl overflow-x-auto">
+          Total Package Price = [(Tier Rate × Nights) + Σ(Activity × Travelers) + Σ(Perk × Nights)] × 0.85
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs text-slate-400">
+        <span>✨ <strong>Direct Checkout Integration:</strong> 1-click button bridges the custom package breakdown seamlessly into checkout with 0 price drift.</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 6: Room Matrix & Property Showcase ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-teal-400 mb-2">Slide 06 • Agoda-Style Catalog</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">Interactive Room Matrix & Details</h2>
+        <p class="text-slate-400 text-sm">Transparent side-by-side room comparison table with real-time inclusions and verified guest ratings.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 my-6">
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-teal-300 font-bold text-sm">
+            <i class="fa-solid fa-table-cells"></i>
+            <span>The Agoda Room Matrix</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Interactive matrix breaking down room square meters (m²), bed configuration, guest capacities, and free breakfast/cancellation inclusions with quantity selectors.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+            <i class="fa-solid fa-images"></i>
+            <span>HD Lightbox Photo Gallery</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            1 Large Hero + 4 Thumbnail grid layout that opens a full-screen image viewer with high-res property photography and thumbnail navigation strip.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-emerald-300 font-bold text-sm">
+            <i class="fa-solid fa-star"></i>
+            <span>6-Dimension Review Scores</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Detailed score bars evaluating <em>Cleanliness, Comfort, Location, Staff Service, Value for Money</em>, and <em>Wi-Fi Speed</em> with authentic traveler testimonials.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between text-xs text-slate-400">
+        <span>🏷️ <strong>Dynamic Urgency Badges:</strong> Integrated <em>"Special Deal"</em> and <em>"Only 2 rooms left at this price"</em> conversion drivers.</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 7: Checkout & Coupon Engine ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-teal-400 mb-2">Slide 07 • Conversion & Payments</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">2-Step Checkout & Coupon Discount Engine</h2>
+        <p class="text-slate-400 text-sm">Streamlined guest reservation with promo code validation and multiple payment options.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- 2-Step Flow -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-credit-card text-teal-400"></i> Frictionless 2-Step Workflow
+          </h3>
+          <div class="space-y-2 text-xs text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-800/60 flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-teal-600 text-white font-bold text-xs flex items-center justify-center">1</span>
+              <span><strong>Step 1:</strong> Lead guest information, arrival time, and special requests.</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-800/60 flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-bold text-xs flex items-center justify-center">2</span>
+              <span><strong>Step 2:</strong> Payment method selection (Card, Pay at Hotel, Instant UPI / QR).</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon Matrix -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-tags text-amber-400"></i> Live Promotional Coupon Engine
+          </h3>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="p-2.5 rounded-xl bg-slate-800/60 border border-teal-500/20">
+              <span class="font-mono font-bold text-teal-300 block">VOYARA20</span>
+              <span class="text-[11px] text-slate-400">20% OFF (up to $150)</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-800/60 border border-amber-500/20">
+              <span class="font-mono font-bold text-amber-300 block">INTERN10</span>
+              <span class="text-[11px] text-slate-400">10% Showcase Discount</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700">
+              <span class="font-mono font-bold text-slate-300 block">EARLYBIRD</span>
+              <span class="text-[11px] text-slate-400">15% Advance Booking</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700">
+              <span class="font-mono font-bold text-slate-300 block">LUXURY50</span>
+              <span class="text-[11px] text-slate-400">25% Luxury Stays</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs text-slate-400">
+        <span>🛡️ <strong>Zero-Surprise Transparency:</strong> Itemizes room subtotal, exact taxes (12%), and coupon discount amounts before submission.</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 8: Digital QR Booking Voucher ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-teal-400 mb-2">Slide 08 • Digital Passes</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">Official Digital QR Booking Voucher</h2>
+        <p class="text-slate-400 text-sm">Print-ready travel confirmation pass with dynamic scannable QR verification and confetti celebration.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 items-center">
+        <!-- Pass Visual Mockup -->
+        <div class="p-6 rounded-2xl bg-white text-slate-900 shadow-2xl space-y-4 border-2 border-teal-600">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <div>
+              <span class="font-heading font-black text-teal-700 text-lg">VOYARA TRAVELS</span>
+              <span class="text-[10px] text-slate-500 block">Official Hotel Confirmation Pass</span>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-xs">Confirmed</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div>
+              <span class="text-slate-400 block text-[10px] uppercase font-bold">Booking Ref</span>
+              <span class="font-mono font-bold text-slate-900">VYR-8849-BALI</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block text-[10px] uppercase font-bold">Guest Name</span>
+              <span class="font-bold text-slate-900">Alex Morgan</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 pt-2 border-t border-slate-200">
+            <div class="w-16 h-16 bg-slate-900 rounded-lg flex items-center justify-center text-white text-xs font-mono">
+              <i class="fa-solid fa-qrcode text-3xl"></i>
+            </div>
+            <div class="text-[11px] text-slate-600">
+              <strong class="text-slate-900 block">Scan at Check-in Desk</strong>
+              Dynamic QR code containing encrypted reference code for instantaneous front-desk verification.
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Highlights -->
+        <div class="space-y-4">
+          <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
+            <h4 class="font-bold text-teal-300 text-sm flex items-center gap-2">
+              <i class="fa-solid fa-qrcode"></i> QRCode.js Dynamic Generation
+            </h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Client-side QR code generator dynamically encodes unique booking URLs, guest metadata, and reservation tokens.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
+            <h4 class="font-bold text-amber-300 text-sm flex items-center gap-2">
+              <i class="fa-solid fa-print"></i> Dedicated @media print CSS
+            </h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Custom print stylesheet strips unnecessary web navigation bars, formatting the pass into a crisp physical or PDF voucher.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs text-slate-400">
+        <span>🎉 <strong>Confetti Animation:</strong> Canvas-confetti celebration triggers automatically on booking confirmation.</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 9: Database Persistence & Management ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-teal-400 mb-2">Slide 09 • Data & Management</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">Database Persistence & "My Bookings"</h2>
+        <p class="text-slate-400 text-sm">Lightweight JSON database saver engine and live customer booking dashboard.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- DB Engine -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-file-code text-teal-400"></i> JSON Database Saver (`data/db.js`)
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="p-2 rounded-lg bg-slate-800/60 font-mono text-[11px] text-teal-300">
+              data/bookings.json — All customer reservations & states
+            </li>
+            <li class="p-2 rounded-lg bg-slate-800/60 font-mono text-[11px] text-amber-300">
+              data/custom_trips.json — Bespoke itinerary packages
+            </li>
+            <li class="p-2 rounded-lg bg-slate-800/60 font-mono text-[11px] text-cyan-300">
+              data/wishlist.json — Saved favorite properties
+            </li>
+          </ul>
+          <p class="text-[11px] text-slate-400 pt-1">
+            Zero third-party database dependency. Safe atomic file reads & writes handled by Node.js file system.
+          </p>
+        </div>
+
+        <!-- My Bookings Dashboard -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-suitcase-rolling text-amber-400"></i> Live Reservation Management
+          </h3>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-emerald-400"></i>
+              <span><strong>Status Filters:</strong> View All, Active Stays, and Cancelled Trips.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-emerald-400"></i>
+              <span><strong>1-Click Free Cancellation:</strong> Updates database state from Confirmed to Cancelled in real time.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-emerald-400"></i>
+              <span><strong>Instant Voucher Re-print:</strong> Access and print confirmation passes anytime.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs text-slate-400">
+        <span>🔄 <strong>REST API Synchronization:</strong> All mutations synchronize via `POST /api/bookings` and `PUT /api/bookings/:id/cancel`.</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 10: Conclusion & Future Roadmap ================= -->
+    <section class="slide flex-col justify-between p-6 sm:p-12 glass-card rounded-3xl">
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2">Slide 10 • Conclusion</div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">Project Learnings & Future Roadmap</h2>
+        <p class="text-slate-400 text-sm">Key engineering milestones achieved and future production scalability paths.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- Internship Key Takeaways -->
+        <div class="p-5 rounded-2xl bg-teal-950/20 border border-teal-500/30 space-y-3">
+          <h3 class="text-base font-bold text-teal-300 flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap"></i> Key Internship Learnings
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-circle-dot text-teal-400 text-[10px] mt-1"></i>
+              <span><strong>Full-Stack Architecture:</strong> Engineered dual production editions (React/TypeScript & Vanilla JS/Node.js).</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-circle-dot text-teal-400 text-[10px] mt-1"></i>
+              <span><strong>Real-Time State Coordination:</strong> Synchronized currency conversions, multi-step math calculations, and checkout.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-circle-dot text-teal-400 text-[10px] mt-1"></i>
+              <span><strong>Agoda-Grade UI/UX:</strong> Built high-conversion responsive layouts with micro-animations & print stylesheets.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Future Enhancements -->
+        <div class="p-5 rounded-2xl bg-amber-950/20 border border-amber-500/30 space-y-3">
+          <h3 class="text-base font-bold text-amber-300 flex items-center gap-2">
+            <i class="fa-solid fa-rocket"></i> Future Roadmap (Voyara v2.0)
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-amber-400 text-[10px] mt-1"></i>
+              <span><strong>AI Travel Concierge:</strong> Integrating Gemini AI for natural language itinerary generation based on user preferences.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-amber-400 text-[10px] mt-1"></i>
+              <span><strong>Live Banking & Forex APIs:</strong> Connecting live payment gateways (Stripe/Razorpay) and live currency rates.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-amber-400 text-[10px] mt-1"></i>
+              <span><strong>Multi-Modal Booking:</strong> Expanding into flight, train, and rental car bundle bookings.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Thank You Box -->
+      <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div>
+          <span class="text-lg font-black text-white font-heading">Thank You! Any Questions?</span>
+          <span class="text-xs text-slate-400 block">Voyara Travels • Final Project Evaluation</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs text-teal-300 font-bold">
+          <i class="fa-solid fa-globe"></i> Live at: localhost:3000 & localhost:5000
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Controls -->
+  <footer class="max-w-7xl mx-auto w-full flex items-center justify-between py-4 px-6 glass-card rounded-2xl mt-4 no-print">
+    <div class="text-xs text-slate-400 flex items-center gap-3">
+      <span>Use <kbd class="px-2 py-1 bg-slate-800 rounded border border-slate-700 text-[10px] text-white">←</kbd> <kbd class="px-2 py-1 bg-slate-800 rounded border border-slate-700 text-[10px] text-white">→</kbd> Arrow Keys or Click</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button id="prevBtn" onclick="changeSlide(-1)" class="px-5 py-2.5 rounded-xl glass-pill hover:bg-white/15 text-xs font-bold text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed transition-all">
+        <i class="fa-solid fa-chevron-left mr-1.5"></i> Previous
+      </button>
+
+      <button id="nextBtn" onclick="changeSlide(1)" class="px-6 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold shadow-lg shadow-teal-500/25 transition-all">
+        Next Slide <i class="fa-solid fa-chevron-right ml-1.5"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Slide Navigation Script -->
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 10;
+
+    function showSlide(n) {
+      const slides = document.querySelectorAll('.slide');
+      if (n > totalSlides) currentSlide = totalSlides;
+      if (n < 1) currentSlide = 1;
+
+      slides.forEach((s, idx) => {
+        s.classList.remove('active');
+        if (idx === currentSlide - 1) {
+          s.classList.add('active');
+        }
+      });
+
+      document.getElementById('currentSlideNum').innerText = currentSlide;
+      document.getElementById('progressBar').style.width = ((currentSlide / totalSlides) * 100) + '%';
+      
+      document.getElementById('prevBtn').disabled = (currentSlide === 1);
+      if (currentSlide === totalSlides) {
+        document.getElementById('nextBtn').innerHTML = '<i class="fa-solid fa-rotate-right mr-1.5"></i> Restart';
+      } else {
+        document.getElementById('nextBtn').innerHTML = 'Next Slide <i class="fa-solid fa-chevron-right ml-1.5"></i>';
+      }
+    }
+
+    function changeSlide(direction) {
+      if (currentSlide === totalSlides && direction === 1) {
+        currentSlide = 1;
+      } else {
+        currentSlide += direction;
+      }
+      showSlide(currentSlide);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        changeSlide(1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        changeSlide(-1);
+      } else if (e.key === 'Home') {
+        currentSlide = 1;
+        showSlide(currentSlide);
+      } else if (e.key === 'End') {
+        currentSlide = totalSlides;
+        showSlide(currentSlide);
+      }
+    });
+
+    showSlide(1);
+  </script>
+</body>
+</html>
