@@ -3,12 +3,15 @@ import { QRCodeSVG } from 'qrcode.react';
 import { Printer, Compass, CheckCircle2, MapPin, Calendar, Clock, Phone, Mail, User, ShieldCheck } from 'lucide-react';
 import { Booking } from '../types';
 import { formatDate } from '../utils/formatters';
+import { useCurrency } from '../context/CurrencyContext';
 
 interface BookingVoucherProps {
   booking: Booking;
 }
 
 export const BookingVoucher: React.FC<BookingVoucherProps> = ({ booking }) => {
+  const { formatAmount } = useCurrency();
+
   const handlePrint = () => {
     window.print();
   };
@@ -189,7 +192,7 @@ export const BookingVoucher: React.FC<BookingVoucherProps> = ({ booking }) => {
             <div className="sm:text-right">
               <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">Total Amount</span>
               <div className="text-2xl font-black text-slate-900 font-['Outfit']">
-                ${booking.pricing.finalTotal.toFixed(2)}
+                {formatAmount(booking.pricing.finalTotal)}
               </div>
               <span className="text-[10px] text-slate-500">Taxes & fees included</span>
             </div>

@@ -16,7 +16,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
   onBackToHotel,
 }) => {
   const { bookingDraft, confirmBooking } = useBooking();
-  const { formatAmount } = useCurrency();
+  const { formatAmount, currency } = useCurrency();
 
   const [step, setStep] = useState<1 | 2>(1);
 
@@ -107,7 +107,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
       discountAmount,
       couponApplied: appliedCoupon || undefined,
       finalTotal,
-      currency: 'USD',
+      currency: currency,
     });
     onBookingSuccess();
   };
@@ -364,7 +364,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                           Pay Directly at Hotel
                         </span>
                         <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
-                          $0 Charged Today
+                          {formatAmount(0)} Charged Today
                         </span>
                       </div>
                       <p className="text-xs text-slate-500 mt-0.5">
@@ -427,7 +427,7 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                     className="px-8 py-4 rounded-2xl bg-brand-600 hover:bg-brand-700 active:scale-98 text-white font-extrabold text-sm shadow-xl shadow-brand-600/30 flex items-center gap-2 uppercase tracking-wider transition-all"
                   >
                     <Lock className="w-4 h-4" />
-                    <span>Confirm & Generate Voucher (${finalTotal.toFixed(2)})</span>
+                    <span>Confirm & Generate Voucher ({formatAmount(finalTotal)})</span>
                   </button>
                 </div>
               </div>

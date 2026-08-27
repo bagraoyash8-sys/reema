@@ -156,7 +156,7 @@ export const MyTripsPage: React.FC<MyTripsPageProps> = ({ onNavigate }) => {
                       Total Paid
                     </span>
                     <span className="text-2xl font-black text-slate-900 font-['Outfit']">
-                      ${booking.pricing.finalTotal.toFixed(2)}
+                      {formatAmount(booking.pricing.finalTotal)}
                     </span>
                     <span className="text-[10px] text-slate-400 block">
                       {booking.paymentStatus === 'PAID' ? 'Paid in Full' : 'Pay at Hotel'}
