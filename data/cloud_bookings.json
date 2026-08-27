@@ -47,6 +47,55 @@
   ],
   "bagraorajesh@gmail.com": [
     {
+      "id": "bk_1787830799398",
+      "bookingNumber": "VY-F02EWSXG",
+      "hotelId": "h-goa-leela",
+      "hotelName": "The Leela Palace Beach Resort Goa (Romantic Honeymoon Custom Package)",
+      "hotelImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "hotelAddress": "Mobor Beach, Cavelossim, South Goa",
+      "hotelCity": "Goa",
+      "hotelCountry": "India",
+      "hotelPhone": "+1 (800) 869-2721",
+      "roomId": "r-goa-1",
+      "roomName": "Lagoon View Deluxe Suite",
+      "roomBedType": "1 King Bed",
+      "roomQuantity": 1,
+      "checkIn": "2026-09-01",
+      "checkOut": "2026-09-08",
+      "nights": 7,
+      "guestCount": {
+        "adults": 67,
+        "children": 0,
+        "rooms": 1
+      },
+      "guestDetails": {
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "email": "bagraorajesh@gmail.com",
+        "phone": "+1 (555) 234-5678",
+        "country": "United States",
+        "specialRequests": "High floor with a nice view, if available please.",
+        "estimatedArrivalTime": "14:00 - 15:00",
+        "isBookingForSomeoneElse": false
+      },
+      "pricing": {
+        "basePrice": 95,
+        "roomTotal": 2380,
+        "taxAndFees": 0,
+        "serviceFee": 0,
+        "discountAmount": 150,
+        "couponApplied": "VOYARA20",
+        "finalTotal": 5631,
+        "currency": "INR"
+      },
+      "paymentMethod": "pay_at_hotel",
+      "paymentStatus": "PAY_AT_PROPERTY",
+      "status": "CONFIRMED",
+      "createdAt": "2026-08-27T11:39:59.398Z",
+      "cancellationDeadline": "2026-08-31",
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-F02EWSXG|The Leela Palace Beach Resort Goa (Romantic Honeymoon Custom Package)|Alex Morgan|2026-09-01"
+    },
+    {
       "id": "bk_1787813002189",
       "bookingNumber": "VY-UG2WDPT9",
       "hotelId": "h-bali-ayana",
@@ -101,7 +150,7 @@
       "id": "bk_1787813461901",
       "bookingNumber": "VY-SX0GC0BU",
       "hotelId": "h-paris-plaza",
-      "hotelName": "HÃÂÃÂ´tel Plaza AthÃÂÃÂ©nÃÂÃÂ©e Paris",
+      "hotelName": "HÃÂÃÂÃÂÃÂ´tel Plaza AthÃÂÃÂÃÂÃÂ©nÃÂÃÂÃÂÃÂ©e Paris",
       "hotelImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
       "hotelAddress": "25 Avenue Montaigne, 8th arr., Paris",
       "hotelCity": "Paris",
@@ -144,7 +193,7 @@
       "status": "CONFIRMED",
       "createdAt": "2026-08-27T06:51:01.901Z",
       "cancellationDeadline": "2026-08-29",
-      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃÂÃÂ´tel Plaza AthÃÂÃÂ©nÃÂÃÂ©e Paris|Alex Morgan|2026-08-30"
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃÂÃÂÃÂÃÂ´tel Plaza AthÃÂÃÂÃÂÃÂ©nÃÂÃÂÃÂÃÂ©e Paris|Alex Morgan|2026-08-30"
     }
   ],
   "bagraorajesh@gmail.comrajews": [
