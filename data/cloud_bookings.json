@@ -101,7 +101,7 @@
       "id": "bk_1787813461901",
       "bookingNumber": "VY-SX0GC0BU",
       "hotelId": "h-paris-plaza",
-      "hotelName": "Hôtel Plaza Athénée Paris",
+      "hotelName": "HÃ´tel Plaza AthÃ©nÃ©e Paris",
       "hotelImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
       "hotelAddress": "25 Avenue Montaigne, 8th arr., Paris",
       "hotelCity": "Paris",
@@ -144,7 +144,58 @@
       "status": "CONFIRMED",
       "createdAt": "2026-08-27T06:51:01.901Z",
       "cancellationDeadline": "2026-08-29",
-      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|Hôtel Plaza Athénée Paris|Alex Morgan|2026-08-30"
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃ´tel Plaza AthÃ©nÃ©e Paris|Alex Morgan|2026-08-30"
+    }
+  ],
+  "bagraorajesh@gmail.comrajews": [
+    {
+      "id": "bk_1787826590041",
+      "bookingNumber": "VY-VD4BG2RZ",
+      "hotelId": "h-bali-ayana",
+      "hotelName": "AYANA Resort Bali & Rock Bar (Luxury Beach & Spa Custom Package)",
+      "hotelImage": "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+      "hotelAddress": "Jl. Karang Mas Sejahtera, Jimbaran, South Kuta, Bali",
+      "hotelCity": "Bali",
+      "hotelCountry": "Indonesia",
+      "hotelPhone": "+1 (800) 869-2721",
+      "roomId": "r-ayana-1",
+      "roomName": "Deluxe Ocean View King Room",
+      "roomBedType": "1 King Bed",
+      "roomQuantity": 1,
+      "checkIn": "2026-09-30",
+      "checkOut": "2026-10-19",
+      "nights": 19,
+      "guestCount": {
+        "adults": 89,
+        "children": 0,
+        "rooms": 1
+      },
+      "guestDetails": {
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "email": "bagraorajesh@gmail.comrajews",
+        "phone": "+1 (555) 234-5678",
+        "country": "United States",
+        "specialRequests": "High floor with a nice view, if available please.",
+        "estimatedArrivalTime": "14:00 - 15:00",
+        "isBookingForSomeoneElse": false
+      },
+      "pricing": {
+        "basePrice": 185,
+        "roomTotal": 2660,
+        "taxAndFees": 0,
+        "serviceFee": 0,
+        "discountAmount": 150,
+        "couponApplied": "VOYARA20",
+        "finalTotal": 19334,
+        "currency": "USD"
+      },
+      "paymentMethod": "card",
+      "paymentStatus": "PAID",
+      "status": "CONFIRMED",
+      "createdAt": "2026-08-27T10:29:50.041Z",
+      "cancellationDeadline": "2026-09-29",
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-VD4BG2RZ|AYANA Resort Bali & Rock Bar (Luxury Beach & Spa Custom Package)|Alex Morgan|2026-09-30"
     }
   ]
 }
