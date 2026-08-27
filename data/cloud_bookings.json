@@ -101,7 +101,7 @@
       "id": "bk_1787813461901",
       "bookingNumber": "VY-SX0GC0BU",
       "hotelId": "h-paris-plaza",
-      "hotelName": "HÃÂ´tel Plaza AthÃÂ©nÃÂ©e Paris",
+      "hotelName": "HÃÂÃÂ´tel Plaza AthÃÂÃÂ©nÃÂÃÂ©e Paris",
       "hotelImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
       "hotelAddress": "25 Avenue Montaigne, 8th arr., Paris",
       "hotelCity": "Paris",
@@ -144,10 +144,59 @@
       "status": "CONFIRMED",
       "createdAt": "2026-08-27T06:51:01.901Z",
       "cancellationDeadline": "2026-08-29",
-      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃÂ´tel Plaza AthÃÂ©nÃÂ©e Paris|Alex Morgan|2026-08-30"
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃÂÃÂ´tel Plaza AthÃÂÃÂ©nÃÂÃÂ©e Paris|Alex Morgan|2026-08-30"
     }
   ],
   "bagraorajesh@gmail.comrajews": [
+    {
+      "id": "bk_1787827323389",
+      "bookingNumber": "VY-N6O32TM2",
+      "hotelId": "h-tokyo-shibuya",
+      "hotelName": "Cerulean Tower Tokyu Hotel Shibuya (Culture & Heritage Custom Package)",
+      "hotelImage": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+      "hotelAddress": "26-1 Sakuragaokacho, Shibuya-ku, Tokyo",
+      "hotelCity": "Tokyo",
+      "hotelCountry": "Japan",
+      "hotelPhone": "+1 (800) 869-2721",
+      "roomId": "r-tokyo-1",
+      "roomName": "Tower Superior King Room (High Floor)",
+      "roomBedType": "1 King Bed",
+      "roomQuantity": 1,
+      "checkIn": "2026-09-01",
+      "checkOut": "2026-09-10",
+      "nights": 9,
+      "guestCount": {
+        "adults": 20,
+        "children": 0,
+        "rooms": 1
+      },
+      "guestDetails": {
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "email": "bagraorajesh@gmail.comrajews",
+        "phone": "+1 (555) 234-5678",
+        "country": "United States",
+        "specialRequests": "High floor with a nice view, if available please.",
+        "estimatedArrivalTime": "14:00 - 15:00",
+        "isBookingForSomeoneElse": false
+      },
+      "pricing": {
+        "basePrice": 195,
+        "roomTotal": 3059,
+        "taxAndFees": 0,
+        "serviceFee": 0,
+        "discountAmount": 150,
+        "couponApplied": "VOYARA20",
+        "finalTotal": 8772,
+        "currency": "INR"
+      },
+      "paymentMethod": "card",
+      "paymentStatus": "PAID",
+      "status": "CONFIRMED",
+      "createdAt": "2026-08-27T10:42:03.389Z",
+      "cancellationDeadline": "2026-08-31",
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-N6O32TM2|Cerulean Tower Tokyu Hotel Shibuya (Culture & Heritage Custom Package)|Alex Morgan|2026-09-01"
+    },
     {
       "id": "bk_1787826967390",
       "bookingNumber": "VY-4J7N7C0M",
