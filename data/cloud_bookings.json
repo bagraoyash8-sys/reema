@@ -44,5 +44,56 @@
       "cancellationDeadline": "2026-08-29",
       "qrData": "VOYARA-VERIFIED-VOUCHER:VY-XZZKPI9R|AYANA Resort Bali & Rock Bar|Alex Morgan|2026-08-30"
     }
+  ],
+  "bagraorajesh@gmail.com": [
+    {
+      "id": "bk_1787813002189",
+      "bookingNumber": "VY-UG2WDPT9",
+      "hotelId": "h-bali-ayana",
+      "hotelName": "AYANA Resort Bali & Rock Bar",
+      "hotelImage": "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+      "hotelAddress": "Jl. Karang Mas Sejahtera, Jimbaran, South Kuta, Bali",
+      "hotelCity": "Bali",
+      "hotelCountry": "Indonesia",
+      "hotelPhone": "+1 (800) 869-2721",
+      "roomId": "r-ayana-1",
+      "roomName": "Deluxe Ocean View King Room",
+      "roomBedType": "1 King Bed",
+      "roomQuantity": 1,
+      "checkIn": "2026-08-30",
+      "checkOut": "2026-09-03",
+      "nights": 4,
+      "guestCount": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1
+      },
+      "guestDetails": {
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "email": "bagraorajesh@gmail.com",
+        "phone": "+1 (555) 234-5678",
+        "country": "United States",
+        "specialRequests": "High floor with a nice view, if available please.",
+        "estimatedArrivalTime": "14:00 - 15:00",
+        "isBookingForSomeoneElse": false
+      },
+      "pricing": {
+        "basePrice": 185,
+        "roomTotal": 740,
+        "taxAndFees": 89,
+        "serviceFee": 0,
+        "discountAmount": 148,
+        "couponApplied": "VOYARA20",
+        "finalTotal": 681,
+        "currency": "USD"
+      },
+      "paymentMethod": "card",
+      "paymentStatus": "PAID",
+      "status": "CONFIRMED",
+      "createdAt": "2026-08-27T06:43:22.189Z",
+      "cancellationDeadline": "2026-08-29",
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-UG2WDPT9|AYANA Resort Bali & Rock Bar|Alex Morgan|2026-08-30"
+    }
   ]
 }
