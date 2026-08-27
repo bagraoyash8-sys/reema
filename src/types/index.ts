@@ -218,8 +218,15 @@ export interface CustomAddon {
   name: string;
   pricePerDay: number;
   description: string;
-  iconName: string;
-  category: 'transport' | 'wellness' | 'service' | 'insurance';
+  icon?: string;
+  iconName?: string;
+  category?: 'transport' | 'wellness' | 'service' | 'insurance';
+}
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
 }
 
 export interface CustomItineraryDay {

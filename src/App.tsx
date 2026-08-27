@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CurrencyProvider } from './context/CurrencyContext';
 import { WishlistProvider } from './context/WishlistContext';
+import { AuthProvider } from './context/AuthContext';
 import { BookingProvider, useBooking } from './context/BookingContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -183,12 +184,14 @@ function MainApp() {
 
 export default function App() {
   return (
-    <CurrencyProvider>
-      <WishlistProvider>
-        <BookingProvider>
-          <MainApp />
-        </BookingProvider>
-      </WishlistProvider>
-    </CurrencyProvider>
+    <AuthProvider>
+      <CurrencyProvider>
+        <WishlistProvider>
+          <BookingProvider>
+            <MainApp />
+          </BookingProvider>
+        </WishlistProvider>
+      </CurrencyProvider>
+    </AuthProvider>
   );
 }

@@ -1,7 +1,8 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { Booking, BookingSelection, SearchParams, Hotel, Room, GuestDetails } from '../types';
 import { StorageService } from '../utils/storage';
 import { calculateNights, generateBookingNumber } from '../utils/formatters';
+import { useAuth } from './AuthContext';
 
 interface BookingContextType {
   searchParams: SearchParams;
@@ -17,12 +18,13 @@ interface BookingContextType {
   confirmedBookings: Booking[];
   currentConfirmedBooking: Booking | null;
   cancelBooking: (bookingId: string) => void;
+  refreshBookings: () => Promise<void>;
 }
 
 const defaultSearchParams: SearchParams = {
   destination: '',
-  checkIn: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0], // 3 days from now
-  checkOut: new Date(Date.now() + 86400000 * 7).toISOString().split('T')[0], // 7 days from now
+  checkIn: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
+  checkOut: new Date(Date.now() + 86400000 * 7).toISOString().split('T')[0],
   nights: 4,
   adults: 2,
   children: 0,
@@ -33,13 +35,38 @@ const defaultSearchParams: SearchParams = {
 const BookingContext = createContext<BookingContextType | undefined>(undefined);
 
 export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { user } = useAuth();
   const [searchParams, setSearchParamsState] = useState<SearchParams>(defaultSearchParams);
   const [bookingDraft, setBookingDraft] = useState<BookingSelection | null>(() => {
-    const savedDraft = sessionStorage.getItem('voyara_booking_draft');
-    return savedDraft ? JSON.parse(savedDraft) : null;
+    try {
+      const savedDraft = sessionStorage.getItem('voyara_booking_draft');
+      return savedDraft ? JSON.parse(savedDraft) : null;
+    } catch {
+      return null;
+    }
   });
-  const [confirmedBookings, setConfirmedBookings] = useState<Booking[]>(() => StorageService.getBookings());
+  
+  const [confirmedBookings, setConfirmedBookings] = useState<Booking[]>(() => 
+    StorageService.getBookings(user?.email)
+  );
   const [currentConfirmedBooking, setCurrentConfirmedBooking] = useState<Booking | null>(null);
+
+  // Sync user bookings whenever user logs in or logs out
+  const refreshBookings = useCallback(async () => {
+    if (user?.email) {
+      // 1. Load from local cache immediately
+      setConfirmedBookings(StorageService.getBookings(user.email));
+      // 2. Sync from cloud asynchronously and update state
+      const synced = await StorageService.syncWithCloud(user.email);
+      setConfirmedBookings(synced);
+    } else {
+      setConfirmedBookings(StorageService.getBookings());
+    }
+  }, [user?.email]);
+
+  useEffect(() => {
+    refreshBookings();
+  }, [refreshBookings]);
 
   // Sync draft to session storage
   useEffect(() => {
@@ -91,6 +118,13 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const deadlineDate = new Date(bookingDraft.checkIn);
     deadlineDate.setDate(deadlineDate.getDate() - 1);
 
+    // If user is logged in, ensure booking is bound to user email for cross-device sync
+    const effectiveEmail = user?.email || guestDetails.email;
+    const finalGuestDetails: GuestDetails = {
+      ...guestDetails,
+      email: effectiveEmail,
+    };
+
     const newBooking: Booking = {
       id: 'bk_' + Date.now(),
       bookingNumber: bookingNum,
@@ -113,18 +147,18 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
         children: bookingDraft.children,
         rooms: bookingDraft.roomsCount,
       },
-      guestDetails,
+      guestDetails: finalGuestDetails,
       pricing,
       paymentMethod,
       paymentStatus: paymentMethod === 'pay_at_hotel' ? 'PAY_AT_PROPERTY' : paymentMethod === 'zero_deposit' ? 'DEPOSIT_HELD' : 'PAID',
       status: 'CONFIRMED',
       createdAt: new Date().toISOString(),
       cancellationDeadline: deadlineDate.toISOString().split('T')[0],
-      qrData: `VOYARA-VERIFIED-VOUCHER:${bookingNum}|${bookingDraft.hotel.name}|${guestDetails.firstName} ${guestDetails.lastName}|${bookingDraft.checkIn}`,
+      qrData: `VOYARA-VERIFIED-VOUCHER:${bookingNum}|${bookingDraft.hotel.name}|${finalGuestDetails.firstName} ${finalGuestDetails.lastName}|${bookingDraft.checkIn}`,
     };
 
-    StorageService.saveBooking(newBooking);
-    setConfirmedBookings(StorageService.getBookings());
+    StorageService.saveBooking(newBooking, effectiveEmail);
+    setConfirmedBookings(StorageService.getBookings(effectiveEmail));
     setCurrentConfirmedBooking(newBooking);
     setBookingDraft(null);
 
@@ -132,8 +166,8 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
   };
 
   const cancelBooking = (bookingId: string) => {
-    StorageService.cancelBooking(bookingId);
-    setConfirmedBookings(StorageService.getBookings());
+    StorageService.cancelBooking(bookingId, user?.email);
+    setConfirmedBookings(StorageService.getBookings(user?.email));
     if (currentConfirmedBooking?.id === bookingId) {
       setCurrentConfirmedBooking(prev => prev ? { ...prev, status: 'CANCELLED' } : null);
     }
@@ -151,6 +185,7 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
         confirmedBookings,
         currentConfirmedBooking,
         cancelBooking,
+        refreshBookings,
       }}
     >
       {children}
