@@ -95,5 +95,56 @@
       "cancellationDeadline": "2026-08-29",
       "qrData": "VOYARA-VERIFIED-VOUCHER:VY-UG2WDPT9|AYANA Resort Bali & Rock Bar|Alex Morgan|2026-08-30"
     }
+  ],
+  "punekarrushi01@gmail.com": [
+    {
+      "id": "bk_1787813461901",
+      "bookingNumber": "VY-SX0GC0BU",
+      "hotelId": "h-paris-plaza",
+      "hotelName": "Hôtel Plaza Athénée Paris",
+      "hotelImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
+      "hotelAddress": "25 Avenue Montaigne, 8th arr., Paris",
+      "hotelCity": "Paris",
+      "hotelCountry": "France",
+      "hotelPhone": "+1 (800) 869-2721",
+      "roomId": "r-paris-1",
+      "roomName": "Prestige Room with Parisian Courtyard View",
+      "roomBedType": "1 Queen Bed",
+      "roomQuantity": 1,
+      "checkIn": "2026-08-30",
+      "checkOut": "2026-09-03",
+      "nights": 4,
+      "guestCount": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1
+      },
+      "guestDetails": {
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "email": "punekarrushi01@gmail.com",
+        "phone": "+1 (555) 234-5678",
+        "country": "United States",
+        "specialRequests": "High floor with a nice view, if available please.",
+        "estimatedArrivalTime": "14:00 - 15:00",
+        "isBookingForSomeoneElse": false
+      },
+      "pricing": {
+        "basePrice": 340,
+        "roomTotal": 1360,
+        "taxAndFees": 163,
+        "serviceFee": 0,
+        "discountAmount": 150,
+        "couponApplied": "VOYARA20",
+        "finalTotal": 1373,
+        "currency": "USD"
+      },
+      "paymentMethod": "card",
+      "paymentStatus": "PAID",
+      "status": "CONFIRMED",
+      "createdAt": "2026-08-27T06:51:01.901Z",
+      "cancellationDeadline": "2026-08-29",
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|Hôtel Plaza Athénée Paris|Alex Morgan|2026-08-30"
+    }
   ]
 }
