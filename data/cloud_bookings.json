@@ -101,7 +101,7 @@
       "id": "bk_1787813461901",
       "bookingNumber": "VY-SX0GC0BU",
       "hotelId": "h-paris-plaza",
-      "hotelName": "HÃ´tel Plaza AthÃ©nÃ©e Paris",
+      "hotelName": "HÃÂ´tel Plaza AthÃÂ©nÃÂ©e Paris",
       "hotelImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
       "hotelAddress": "25 Avenue Montaigne, 8th arr., Paris",
       "hotelCity": "Paris",
@@ -144,10 +144,59 @@
       "status": "CONFIRMED",
       "createdAt": "2026-08-27T06:51:01.901Z",
       "cancellationDeadline": "2026-08-29",
-      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃ´tel Plaza AthÃ©nÃ©e Paris|Alex Morgan|2026-08-30"
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃÂ´tel Plaza AthÃÂ©nÃÂ©e Paris|Alex Morgan|2026-08-30"
     }
   ],
   "bagraorajesh@gmail.comrajews": [
+    {
+      "id": "bk_1787826967390",
+      "bookingNumber": "VY-4J7N7C0M",
+      "hotelId": "h-santorini-grace",
+      "hotelName": "Grace Hotel, Auberge Resorts Collection",
+      "hotelImage": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+      "hotelAddress": "Imerovigli, Santorini",
+      "hotelCity": "Santorini",
+      "hotelCountry": "Greece",
+      "hotelPhone": "+1 (800) 869-2721",
+      "roomId": "r-sant-1",
+      "roomName": "Deluxe Caldera View Suite with Outdoor Plunge Pool",
+      "roomBedType": "1 King Bed",
+      "roomQuantity": 1,
+      "checkIn": "2026-08-30",
+      "checkOut": "2026-09-03",
+      "nights": 4,
+      "guestCount": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1
+      },
+      "guestDetails": {
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "email": "bagraorajesh@gmail.comrajews",
+        "phone": "+1 (555) 234-5678",
+        "country": "United States",
+        "specialRequests": "High floor with a nice view, if available please.",
+        "estimatedArrivalTime": "14:00 - 15:00",
+        "isBookingForSomeoneElse": false
+      },
+      "pricing": {
+        "basePrice": 240,
+        "roomTotal": 960,
+        "taxAndFees": 115,
+        "serviceFee": 0,
+        "discountAmount": 150,
+        "couponApplied": "VOYARA20",
+        "finalTotal": 925,
+        "currency": "USD"
+      },
+      "paymentMethod": "card",
+      "paymentStatus": "PAID",
+      "status": "CONFIRMED",
+      "createdAt": "2026-08-27T10:36:07.390Z",
+      "cancellationDeadline": "2026-08-29",
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-4J7N7C0M|Grace Hotel, Auberge Resorts Collection|Alex Morgan|2026-08-30"
+    },
     {
       "id": "bk_1787826590041",
       "bookingNumber": "VY-VD4BG2RZ",
