@@ -50,7 +50,7 @@
       "id": "bk_1787973837807",
       "bookingNumber": "VY-5MW1U4RU",
       "hotelId": "h-paris-plaza",
-      "hotelName": "Hôtel Plaza Athénée Paris (Culture & Heritage Custom Package)",
+      "hotelName": "HÃ´tel Plaza AthÃ©nÃ©e Paris (Culture & Heritage Custom Package)",
       "hotelImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
       "hotelAddress": "25 Avenue Montaigne, 8th arr., Paris",
       "hotelCity": "Paris",
@@ -93,7 +93,7 @@
       "status": "CONFIRMED",
       "createdAt": "2026-08-29T03:23:57.807Z",
       "cancellationDeadline": "2026-09-02",
-      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-5MW1U4RU|Hôtel Plaza Athénée Paris (Culture & Heritage Custom Package)|Alex Morgan|2026-09-03"
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-5MW1U4RU|HÃ´tel Plaza AthÃ©nÃ©e Paris (Culture & Heritage Custom Package)|Alex Morgan|2026-09-03"
     },
     {
       "id": "bk_1787943208624",
@@ -248,7 +248,7 @@
       "id": "bk_1787813461901",
       "bookingNumber": "VY-SX0GC0BU",
       "hotelId": "h-paris-plaza",
-      "hotelName": "HÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´tel Plaza AthÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©nÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©e Paris",
+      "hotelName": "HÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´tel Plaza AthÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©nÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©e Paris",
       "hotelImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
       "hotelAddress": "25 Avenue Montaigne, 8th arr., Paris",
       "hotelCity": "Paris",
@@ -291,7 +291,7 @@
       "status": "CONFIRMED",
       "createdAt": "2026-08-27T06:51:01.901Z",
       "cancellationDeadline": "2026-08-29",
-      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´tel Plaza AthÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©nÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©e Paris|Alex Morgan|2026-08-30"
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-SX0GC0BU|HÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´tel Plaza AthÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©nÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©e Paris|Alex Morgan|2026-08-30"
     }
   ],
   "bagraorajesh@gmail.comrajews": [
@@ -441,6 +441,57 @@
       "createdAt": "2026-08-27T10:29:50.041Z",
       "cancellationDeadline": "2026-09-29",
       "qrData": "VOYARA-VERIFIED-VOUCHER:VY-VD4BG2RZ|AYANA Resort Bali & Rock Bar (Luxury Beach & Spa Custom Package)|Alex Morgan|2026-09-30"
+    }
+  ],
+  "alex.morgan@example.com": [
+    {
+      "id": "bk_1788249511592",
+      "bookingNumber": "VY-UZQ0F22Y",
+      "hotelId": "h-bali-ayana",
+      "hotelName": "AYANA Resort Bali & Rock Bar",
+      "hotelImage": "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+      "hotelAddress": "Jl. Karang Mas Sejahtera, Jimbaran, South Kuta, Bali",
+      "hotelCity": "Bali",
+      "hotelCountry": "Indonesia",
+      "hotelPhone": "+1 (800) 869-2721",
+      "roomId": "r-ayana-1",
+      "roomName": "Deluxe Ocean View King Room",
+      "roomBedType": "1 King Bed",
+      "roomQuantity": 2,
+      "checkIn": "2026-09-04",
+      "checkOut": "2026-09-08",
+      "nights": 4,
+      "guestCount": {
+        "adults": 2,
+        "children": 0,
+        "rooms": 1
+      },
+      "guestDetails": {
+        "firstName": "Alex",
+        "lastName": "Morgan",
+        "email": "alex.morgan@example.com",
+        "phone": "+1 (555) 234-5678",
+        "country": "United States",
+        "specialRequests": "High floor with a nice view, if available please.",
+        "estimatedArrivalTime": "14:00 - 15:00",
+        "isBookingForSomeoneElse": false
+      },
+      "pricing": {
+        "basePrice": 185,
+        "roomTotal": 1480,
+        "taxAndFees": 178,
+        "serviceFee": 0,
+        "discountAmount": 150,
+        "couponApplied": "VOYARA20",
+        "finalTotal": 1508,
+        "currency": "USD"
+      },
+      "paymentMethod": "card",
+      "paymentStatus": "PAID",
+      "status": "CONFIRMED",
+      "createdAt": "2026-09-01T07:58:31.592Z",
+      "cancellationDeadline": "2026-09-03",
+      "qrData": "VOYARA-VERIFIED-VOUCHER:VY-UZQ0F22Y|AYANA Resort Bali & Rock Bar|Alex Morgan|2026-09-04"
     }
   ]
 }
